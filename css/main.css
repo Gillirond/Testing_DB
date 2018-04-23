@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    display: inline-block;
+    width: 69%;
+}
+
+#loginbutton {
+    display: inline-block;
+    width: 29%;
+    text-align: right;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #f6f9e5;
+    padding: 3px;
+}
+
+#authmenu {
+    display: inline-block;
+    width: 29%;
+    text-align: right;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #f6f9e5;
+    padding: 3px;
+}
+
+#username {
+    display: inline-block;
+    margin: 0px 10px 0px 5px;
+}
+
+#logoutbutton {
+    display: inline-block;
+    margin: 0px 5px 0px 10px;
+}
+
+#loginregister {
+    display: none;
+    position: absolute;
+    left: 59%;
+    width: 40%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#loginForm {
+    display: block;
+}
+
+#loginForm fieldset div input {
+    margin: 0 5px 0 5px;
+}
+
+#loginForm fieldset div div {
+    width: 100px;
+    height: 19px;
+    display: inline-block;
+}
+
+#registerForm {
+    display: none;
+}
+
+#registerForm fieldset div input {
+    margin: 0 5px 0 5px;
+}
+
+#registerForm fieldset div div {
+    width: 100px;
+    height: 19px;
+    display: inline-block;
+}
+
+#main {
+    height: 600px;
+    line-height: 600px;
+    text-align: center;
+}
+
+footer {
+
+}
