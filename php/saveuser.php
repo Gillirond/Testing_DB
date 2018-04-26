@@ -20,12 +20,22 @@ require '../vendor/autoload.php';
    //echo "Collection selected succsessfully";
 
    $usercursor = $profilecol->findOne(array("_id"=>new MongoDB\BSON\ObjectID($userid)));
-   $usercursor['male']=$male;
-   $usercursor['dob']=$dob;
-   $usercursor['address']['country']=$country;
-   $usercursor['address']['city']=$city;
+   $arr = array(
+      "_id"=>$usercursor["_id"],
+      "email"=>$usercursor["email"],
+      "login"=>$usercursor["login"],
+      "password"=>$usercursor["password"],
+      "male"=>$male,
+      "dob"=>$dob,
+      "address"=>array(
+         "country"=>$country,
+         "city"=>$city
+      ),
+   );
 
-   $profilecol->save($usercursor);
+$profilecol->deleteOne(array("_id"=>new MongoDB\BSON\ObjectID($userid)), array('safe'=>true));
+$profilecol->insertOne($arr);
+   //$profilecol->save($arr);
 
    echo 'changes saved';
    } catch (MongoConnectionException $e) {
